@@ -17,6 +17,7 @@ public class TypiCodeApi {
 	
 	//should but in properties/db for easy maintenance
 	final String uriGetPost = "https://jsonplaceholder.typicode.com/posts?id={id}";
+	final String uriGetAll = "https://jsonplaceholder.typicode.com/posts";
 	
 	
 	public List<OBPost> GetPost(String id) throws JsonProcessingException,JsonMappingException {
@@ -29,7 +30,7 @@ public class TypiCodeApi {
 		
 		try {
 			
-			if(id != "") {
+			if(!id.isEmpty()) {
 				
 				params.put("id", id);
 				result = restTemplate.getForObject(uriGetPost, String.class, params);
@@ -38,7 +39,7 @@ public class TypiCodeApi {
 			
 			else {
 				
-				result = restTemplate.getForObject(uriGetPost, String.class);
+				result = restTemplate.getForObject(uriGetAll, String.class);
 			}
 			
 			if (result != "") {

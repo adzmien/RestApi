@@ -2,20 +2,21 @@ package com.assignment.ob;
 
 public class OBMessage {
 	
-	private String SendMessage;
-	private String Share;
-	
-	public String getSendMessage() {
-		return SendMessage;
+	String sendmessage;
+	String share;
+	public String getSendmessage() {
+		return sendmessage;
 	}
-	public void setSendMessage(String sendMessage) {
-		SendMessage = sendMessage;
+	public void setSendmessage(String sendmessage) {
+		this.sendmessage = sendmessage;
 	}
 	public String getShare() {
-		return Share;
+		return share;
 	}
 	public void setShare(String share) {
-		Share = share;
+		this.share = share;
 	}
+	
+	
 
 }

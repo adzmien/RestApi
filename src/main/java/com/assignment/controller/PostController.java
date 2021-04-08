@@ -37,13 +37,13 @@ public class PostController {
 		}
 	}
 	
-	@PostMapping("/post/sendpost")
+	@PostMapping(path = "/post/sendpost", consumes = "application/json")
 	public String SendPost(@RequestBody OBMessage ob) {
 		
 		
 		try {
 			
-			return "Succesfully posted :  " +  ob.getSendMessage();
+			return "Succesfully posted :  " +  ob.getSendmessage();
 		}
 		
 		catch(Exception ex) {
